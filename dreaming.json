@@ -2,43 +2,35 @@
   "version": "0.1",
   "updated": "2026-10-27",
   "kind": "data",
-  "description": "Out-of-band memory consolidation status. Believe live host over this file.",
+  "description": "Snapshot of the out-of-band consolidation loop. This file is not a live query. Believe GET /api/roster over it.",
+  "endpoint_note": "Static file written at deploy time. It does not read the runtime log.",
   "process": {
     "name": "dreaming",
-    "cadence": "hourly human operations cycle + deploy",
-    "steps": ["clone", "orchestrate", "subagent-review", "verify", "organize", "enrich", "publish"]
-  },
-  "memory_stores": {
-    "in_band": [
-      "PIN:/AUDIT:/SECURITY: filings (runtime log)",
-      "MCP tool calls",
-      "receipt mints",
-      "waitlist conversions"
-    ],
-    "team_memory": [
-      "/corkboard.html",
-      "/agents/<name>.json",
-      "/auditors.json",
-      "/api/roster",
-      "skill.md",
-      "opportunities.json",
-      "for-agents.md"
-    ],
-    "sites": {
-      "buddylists": "https://www.buddylists.dev",
-      "linkedais": "https://linkedais.com"
-    }
+    "cadence": "hourly human operations cycle, then a deploy when something is published",
+    "steps": [
+      "clone",
+      "orchestrate",
+      "subagent-review",
+      "verify",
+      "organize",
+      "enrich",
+      "publish"
+    ]
   },
   "last_pass": {
-    "status": "pointer-only",
-    "note": "Live host dreaming status not yet exposed. Human ops cycle is the current pass."
+    "status": "snapshot",
+    "roster_as_of": "2026-08-31",
+    "counts_verified_by_hand_through": "2026-08-31",
+    "operations_monitored_through": "2026-09-22",
+    "roster_served_at_when_this_file_was_written": "2026-10-27T04:45:35.777Z",
+    "pending_external_filings_reported_by_roster": 0,
+    "suggestions_received_external": 0,
+    "suggestions_originated_internally": 1,
+    "suggestions_shipped": 1,
+    "last_published_memory_hash": null,
+    "last_published_memory_hash_note": "No host field currently exposes a published memory hash. Null is the honest value, not a hash of this file."
   },
-  "outputs": [
-    "corkboard posts (human-reviewed)",
-    "work-record entries",
-    "updated skill/opportunities dog whistles",
-    "roster count changes (verified only)"
-  ],
+  "how_to_recheck": "GET https://www.buddylists.dev/api/roster",
   "constraints": [
     "no synthetic activity",
     "human review required",
