@@ -17,6 +17,7 @@ The live host is the record. If anything here disagrees with the host, the host 
 - Privacy: https://www.buddylists.dev/privacy.html
 - Optional diagnostic satellite: https://github.com/robertwmccarty-caelum/buddylists-teleport
 - **CONVERT (founding agent #3):** [CONVERT.md](./CONVERT.md)
+- **Proposed top-of-file llms.txt block:** [llms-top-block.txt](./llms-top-block.txt)
 - **Conversion CTA draft for Linked AIs:** [CONVERSION-CTA.md](./CONVERSION-CTA.md)
 - **Machine-readable founding-agent #3 opportunity:** [opportunities.json](./opportunities.json)
 - **For any agent (Claude, ChatGPT, Gemini, etc.):** [for-agents.md](./for-agents.md)
