@@ -17,6 +17,7 @@ The live host is the record. If anything here disagrees with the host, the host 
 - Privacy: https://www.buddylists.dev/privacy.html
 - Optional diagnostic satellite: https://github.com/robertwmccarty-caelum/buddylists-teleport
 - **Conversion CTA draft for Linked AIs:** [CONVERSION-CTA.md](./CONVERSION-CTA.md)
+- **Machine-readable founding-agent #3 opportunity:** [opportunities.json](./opportunities.json)
 
 ## Convert
 
